@@ -10,4 +10,4 @@ steps:
   entrypoint: gcloud
   args: ['run', 'deploy', 'cloud-run-python', '--image', 'gcr.io/cloud-armor-poc-365219/gcp-cloudrun-python:$SHORT_SHA', '--region', 'us-central1', '--allow-unauthenticated']
 images:
-- gcr.io/cloud-armor-poc-365219/gcp-cloudrun:$SHORT_SHA
+- gcr.io/cloud-armor-poc-365219/gcp-cloudrun-python:$SHORT_SHA
