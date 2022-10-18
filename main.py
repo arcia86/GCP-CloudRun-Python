@@ -15,7 +15,9 @@ def hello_world():
         return "Hello {}!".format(name) + "I am come from =" + geo
     else:
         return "Hello {}!".format(name) + "I am come from =" + geo 
-
+@app.route("/deny")
+def deny():
+    return "You have been denied by Cloud Armor"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("HTTP_PORT")))
