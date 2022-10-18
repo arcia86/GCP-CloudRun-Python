@@ -10,7 +10,11 @@ app = Flask(__name__)
 def hello_world():
     name = os.environ.get("NAME", "World")
     geo = request.headers.get('X-Client-Geo-Location')
-    return "Hello {}!".format(name) + "I am come from =" + geo 
+    if geo == None:
+        geo == "No country"
+        return "Hello {}!".format(name) + "I am come from =" + geo
+    else:
+        return "Hello {}!".format(name) + "I am come from =" + geo 
 
 
 if __name__ == "__main__":
